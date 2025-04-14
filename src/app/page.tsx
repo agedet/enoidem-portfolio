@@ -1,10 +1,10 @@
-import Side from "@/components/Side";
+import About from "@/components/About";
 
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Side />
+      <About />
     </div>
   );
 }
