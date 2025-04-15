@@ -10,13 +10,13 @@ export default function About() {
             </h2>
         </div>
         <div>
-            <div className='mb-4 h-full w-full rounded-full'>
+            <div className='mb-4'>
                 <Image 
                     src='/professor-enoidem-usoro.png'
                     alt='professor-enoidem-usoro'
                     width={500}
                     height={100}
-                    className='w-[298px] h-[298px] rounded-full object-cover lg:w-[498px] h-[498px]'
+                    className='w-[298px] h-[298px] rounded-full object-cover lg:w-[498px] h-[498px] bg-[#fff]'
                 />
             </div>
 
