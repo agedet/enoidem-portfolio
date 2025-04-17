@@ -2,6 +2,8 @@ import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Education from "@/components/Education";
+import Publications from "@/components/Publications";
+import Contact from "@/components/Contact";
 
 
 export default function Home() {
@@ -10,6 +12,8 @@ export default function Home() {
       <About />
       <Education />
       <Experience />
+      <Publications />
+      <Contact />
       <Footer />
     </div>
   );
