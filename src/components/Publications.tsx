@@ -1,7 +1,18 @@
 import Image from 'next/image'
 import React from 'react'
 
-const PUBLICATIONS = [
+const PUBLICATIONS_JOURNAL_ARTICLES = [
+    {
+        author: 'Usoro, e. B.',
+        year: 2016,
+        articleTitle: 'Towards Transformation of Higher Education in Nigeria: a Practical Reality',
+        journalTitle: 'Multidisciplinary Journal of Academic Excellence.',
+        volume: '15(1)',
+        page: '',
+        url: '',
+        country: '',
+        image: '/publications/journal/14.jpg',
+    },
     {
         author: 'Akpan, G. A., Etim, V. E. P. & Usoro, E. B.',
         year: 2009,
@@ -11,9 +22,22 @@ const PUBLICATIONS = [
         page: '52 - 57',
         url: 'www.ajeduionline.org',
         country: 'Ghana',
-        image: '/publications/journal.jpg',
+        image: '/publications/journal/journal.jpg',
     },
+    
+    
 ]
+
+// const PUBLICATIONS_BOOK_CHAPTERS = [
+//     {
+//         author: 'Usoro, E. B., Bassey, S. U. & Bassey, U. U.',
+//         articleTitle: 'Functions of the University',
+//         journalTitle: 'In Management of Higher Education in Africa(eds)',
+//         page: '19-40',
+//         publisher: 'Abaam Publishing Co. Uyo',
+//         image: '/publications/book.jpg',
+//     },
+// ]
 
 
 function Publications() {
@@ -24,7 +48,7 @@ function Publications() {
         </div>
         <div>
             <ul className="group/list">
-                {PUBLICATIONS.map((publication, index) => (
+                {PUBLICATIONS_JOURNAL_ARTICLES.map((publication, index) => (
                     <li key={index} className="mb-12">
                         <div className="group relative grid grid-cols-8 gap-4 transition-all sm:items-center sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                             <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
@@ -61,13 +85,13 @@ function Publications() {
                                     <span className='italic '>
                                         {publication.articleTitle}.
                                     </span> {' '}
-                                    <span className=""> 
+                                    <span> 
                                         {publication.journalTitle} 
                                     </span> {' '} 
-                                    <span className=""> 
+                                    <span> 
                                         {publication.volume} 
                                     </span> {' '} 
-                                    <span className=""> 
+                                    <span> 
                                         {publication.page} 
                                     </span> {' '} 
                                     <span>{publication.url}</span> {' '}
