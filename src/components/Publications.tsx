@@ -83,14 +83,14 @@ function Publications() {
                 defaultValue='journal-articles'
                 className=""
             >
-                <TabsList className='mb-6 flex flex-row gap-1 xl:mx-0 xl:gap-6'>
-                    <TabsTrigger value="journal-articles" className="text-slate-200 font-semibold text-base">
+                <TabsList className='mb-6 flex gap-1 xl:mx-0 xl:gap-6'>
+                    <TabsTrigger value="journal-articles" className="text-slate-200 font-semibold text-xs">
                         Journal Articles
                     </TabsTrigger>
-                    <TabsTrigger value="book-chapters" className="text-slate-200 font-semibold text-base">
+                    <TabsTrigger value="book-chapters" className="text-slate-200 font-semibold text-xs">
                         Book Chapters
                     </TabsTrigger>
-                    <TabsTrigger value="conference-papers" className="text-slate-200 font-semibold text-base">
+                    <TabsTrigger value="conference-papers" className="text-slate-200 font-semibold text-xs">
                         Conference Papers
                     </TabsTrigger>
                 </TabsList>
