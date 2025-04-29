@@ -15,7 +15,7 @@ export default function About() {
                     src='/professor-enoidem-usoro.png'
                     alt='professor-enoidem-usoro'
                     width={500}
-                    height={500}
+                    height={100}
                     className='w-[298px] h-[298px] rounded-full object-cover lg:w-[498px] lg:h-[498px] bg-[#9b7f69] border-4 p-[15px]'
                 />
             </div>

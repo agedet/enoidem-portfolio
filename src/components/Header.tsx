@@ -13,7 +13,7 @@ function Header() {
           Professor of Business Education
         </h2>
 
-        <p className="mt-4 max-w-xs leading-normal">
+        <p className="mt-4 max-w-xs text-slate-300 leading-normal">
           Deputy Vice Chancellor (Academics) of University of Uyo
         </p>
       
@@ -23,13 +23,15 @@ function Header() {
         >
           <ul className="mt-16 w-max">
             <li>
-              <a 
-                href="#about" 
-                className="group flex items-center py-3 active"
-              >
-                <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-primary group-focus-visible:w-16 group-focus-visible:bg-primary motion-reduce:transition-none"></span>
-                <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-primary group-focus-visible:text-primary">About</span>
-              </a>
+              <Link href="#about" legacyBehavior>
+                <a 
+                   
+                  className="group flex items-center py-3 active"
+                >
+                  <span className="nav-indicator mr-4 h-px w-8 bg-slate-300 transition-all group-hover:w-16 group-hover:bg-primary group-focus-visible:w-16 group-focus-visible:bg-primary motion-reduce:transition-none"></span>
+                  <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-300 group-hover:text-primary group-focus-visible:text-primary">About</span>
+                </a>
+              </Link>
             </li>
 
             <li>
@@ -37,8 +39,8 @@ function Header() {
                 href="#education" 
                 className="group flex items-center py-3"
               >
-                <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-primary group-focus-visible:w-16 group-focus-visible:bg-primary motion-reduce:transition-none"></span>
-                <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-primary group-focus-visible:text-primary">Education</span>
+                <span className="nav-indicator mr-4 h-px w-8 bg-slate-300 transition-all group-hover:w-16 group-hover:bg-primary group-focus-visible:w-16 group-focus-visible:bg-primary motion-reduce:transition-none"></span>
+                <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-300 group-hover:text-primary group-focus-visible:text-primary">Education</span>
               </a>
             </li>
 
@@ -47,8 +49,8 @@ function Header() {
                 href="#experience" 
                 className="group flex items-center py-3"
               >
-                <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-primary group-focus-visible:w-16 group-focus-visible:bg-primary motion-reduce:transition-none"></span>
-                <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-primary group-focus-visible:text-primary">Experience</span>
+                <span className="nav-indicator mr-4 h-px w-8 bg-slate-300 transition-all group-hover:w-16 group-hover:bg-primary group-focus-visible:w-16 group-focus-visible:bg-primary motion-reduce:transition-none"></span>
+                <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-300 group-hover:text-primary group-focus-visible:text-primary">Experience</span>
               </a>
             </li>
 
@@ -57,15 +59,15 @@ function Header() {
                 href="#publications" 
                 className="group flex items-center py-3"
               >
-                <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-primary group-focus-visible:w-16 group-focus-visible:bg-primary motion-reduce:transition-none"></span>
-                <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-primary group-focus-visible:text-primary">Publications</span>
+                <span className="nav-indicator mr-4 h-px w-8 bg-slate-300 transition-all group-hover:w-16 group-hover:bg-primary group-focus-visible:w-16 group-focus-visible:bg-primary motion-reduce:transition-none"></span>
+                <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-300 group-hover:text-primary group-focus-visible:text-primary">Publications</span>
               </a>
             </li>
 
             <li>
               <a href="#contact" className="group flex items-center py-3">
-                <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-primary group-focus-visible:w-16 group-focus-visible:bg-primary motion-reduce:transition-none"></span>
-                <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-primary group-focus-visible:text-primary">Contact</span>
+                <span className="nav-indicator mr-4 h-px w-8 bg-slate-300 transition-all group-hover:w-16 group-hover:bg-primary group-focus-visible:w-16 group-focus-visible:bg-primary motion-reduce:transition-none"></span>
+                <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-300 group-hover:text-primary group-focus-visible:text-primary">Contact</span>
               </a>
             </li>
           </ul>
@@ -76,7 +78,7 @@ function Header() {
         <li className="mr-5 shrink-0 text-xs">
           <a 
             href="" 
-            className="block hover:text-primary" 
+            className="block text-slate-300 hover:text-primary" 
             target="_blank" 
             rel="noopener noreferrer" 
             aria-label="LinkedIn (opens in a new tab)" 
@@ -97,7 +99,7 @@ function Header() {
 
         <li>
           <a 
-            className="block hover:text-primary" 
+            className="block text-slate-300 hover:text-primary" 
             href="https://instagram.com/" 
             target="_blank" 
             rel="noreferrer noopener" 

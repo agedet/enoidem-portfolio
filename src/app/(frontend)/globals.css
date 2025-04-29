@@ -86,6 +86,26 @@ a:hover {
   color: var(--primary);
 }
 
+.hideMenuNav {
+  display: none;
+}
+
+.showMenuNav {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: absolute;
+  width: 60%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: var(--secondary);
+  z-index: 40;
+  font-weight: 600;
+  padding: 40px 20px;
+  opacity: 0.94;
+}
+
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;

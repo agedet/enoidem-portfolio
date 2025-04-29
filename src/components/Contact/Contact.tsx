@@ -25,7 +25,7 @@ function Contact() {
       </div>
 
       <div>
-        <div className='mb-4'>
+        <div className='mb-6'>
           < h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl"
           >
             Drop a message below, and let&lsquo;s start a conversation.
