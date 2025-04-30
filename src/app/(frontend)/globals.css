@@ -95,7 +95,7 @@ a:hover {
   justify-content: start;
   align-items: center;
   position: absolute;
-  width: 60%;
+  width: 63.33%;
   height: 100vh;
   top: 0;
   left: 0;
@@ -103,7 +103,7 @@ a:hover {
   z-index: 40;
   font-weight: 600;
   padding: 40px 20px;
-  opacity: 0.94;
+  opacity: 0.99;
 }
 
 .dark {

@@ -56,28 +56,30 @@ export default function ArticlesPage() {
   );
 
   return (
-    <main>
-      <div className='bg-background px-8 pt-8'>
-        <div>
-          <Breadcrumb>
-          
-          </Breadcrumb>
-          <Link href="/" className="text-slate-200 hover:underline">
-            ← Back to Home
-          </Link>
-        </div>
+    <main className=''>
+      <div className='bg-background'>
+        <div className='pt-8 mx-auto max-w-screen-xl px-6 md:px-12'>
+          <div>
+            <Breadcrumb>
+            
+            </Breadcrumb>
+            <Link href="/" className="text-slate-200 hover:underline">
+              ← Back to Home
+            </Link>
+          </div>
 
-        <div className='py-8'>
-          <h1 className="text-4xl text-slate-200 font-bold mb-8 text-start hover:text-slate-200">Publications</h1>
+          <div className='py-8'>
+            <h1 className="text-4xl text-slate-200 font-bold mb-8 text-start hover:text-slate-200">Publications</h1>
+          </div>
         </div>
       </div>
 
-      <div className='flex flex-col items-center md:flex-row '>
-        <section className='flex-[3]'>
+      <div className='flex flex-col mx-auto max-w-screen-xl px-6 md:px-12  md:flex-row gap-14'>
+        <section className='flex-[4]'>
           <div className="space-y-8 py-8">
-            <div className='px-8'>
+            <div>
               <Tabs>
-                <TabsList className="">
+                <TabsList>
                   <TabsTrigger value="journal" className="text-white font-semibold">
                     Journal Articles
                   </TabsTrigger>
@@ -98,38 +100,36 @@ export default function ArticlesPage() {
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.4 }}
                     >
-                      <div
-                        className="space-y-4 md:space-y-0 md:space-x-6"
-                      >
-                        <div className="py-2">
-                          <p className="mt-2 text-sm leading-normal">
-                            <span>{article.author} {' '} 
-                              <span className="inline-block">{article.year}. {' '}</span>
+                      <div className="py-2">
+                        <p className="mt-2 text-sm text-black leading-normal">
+                          <span>{article.author} {' '} 
+                            <span className="inline-block">
+                              {article.year}. 
                             </span>
-                            <Link href={`/articles/${article.slug}`}>
-                              <span className='italic '>
-                                {article.articleTitle}.
-                              </span> {' '}
-                            </Link>
-                            <span> 
-                              {article.journalTitle} 
-                            </span> {' '} 
-                            <span> 
-                              {article.volume} 
-                            </span> {' '} 
-                            <span> 
-                              {article.page} 
-                            </span> {' '} 
-                            <span>{article.url}</span> {' '}
-                            <span>
-                              {article.country}.
-                            </span>
-                          </p>
-
-                          <Link href={`/articles/${article.slug}`}>
-                            <span className="text-primary hover:underline inline-block mt-4">Read More →</span>
+                          </span> {' '}
+                          <Link href={`/archive/${article.slug}`}>
+                            <span className='italic'>
+                              {article.articleTitle}.
+                            </span> {' '}
                           </Link>
-                        </div>
+                          <span> 
+                            {article.journalTitle} 
+                          </span> {' '} 
+                          <span> 
+                            {article.volume} 
+                          </span> {' '} 
+                          <span> 
+                            {article.page} 
+                          </span> {' '} 
+                          <span>{article.url}</span> {' '}
+                          <span>
+                            {article.country}.
+                          </span>
+                        </p>
+
+                        <Link href={`/archive/${article.slug}`}>
+                          <span className="text-primary hover:underline inline-block mt-4">View →</span>
+                        </Link>
                       </div>
                     </motion.div>
                   ))}
@@ -159,7 +159,7 @@ export default function ArticlesPage() {
                 key={i}
                 onClick={() => setCurrentPage(i + 1)}
                 className={`px-4 py-2 rounded ${
-                  currentPage === i + 1 ? 'bg-blue-600 text-white' : 'bg-gray-200 hover:bg-gray-300'
+                  currentPage === i + 1 ? 'bg-primary text-white' : 'bg-gray-200 hover:bg-gray-300'
                 }`}
               >
                 {i + 1}
@@ -176,15 +176,13 @@ export default function ArticlesPage() {
           </div>
         </section>
         
-        <section className='flex-[1]'>
-          <div className="bg-background px-8 pt-8">
-            <div className='py-8'>
+        <section className='flex-[3]'>
+          <div className="py-8">
+            <div>
               <h1 className="text-4xl text-slate-200 font-bold mb-8 text-start hover:text-slate-200">Conference Papers</h1>
             </div>
-          </div>
 
-          <div className="bg-background px-8 pt-8">
-            <div className='py-8'>
+            <div>
               <h1 className="text-4xl text-slate-200 font-bold mb-8 text-start hover:text-slate-200">Books</h1>
             </div>
           </div>

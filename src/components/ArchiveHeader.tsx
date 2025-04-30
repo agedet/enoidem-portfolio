@@ -15,7 +15,7 @@ function ArchiveHeader() {
     const closeMobileClicked = () => setIsNavOpen(false);
 
   return (
-    <header className="bg-slate-900 px-4 py-4">
+    <header className="bg-slate-900 py-4 mx-auto max-w-screen-xl px-6 md:px-12">
         <div className="flex justify-between items-center">
             <div className='flex-[1]'>
                 <h1 className="text-2xl font-bold tracking-tight text-slate-200 sm:text-3xl">
@@ -80,11 +80,11 @@ function ArchiveHeader() {
 
                     {/* NAV MENU */}
                     <div className={isNavOpen ? 'showMenuNav' : 'hideMenuNav'}>
-                        <div className='CROSS-ICON bg-accent absolute top-2 right-3 px-2 py-2 rounded-md'
+                        <div className='CROSS-ICON bg-accent absolute top-6 right-6 px-1 py-1 rounded-md'
                             onClick={() => setIsNavOpen(false)}
                         >
                             <svg
-                                className='h-8 w-8 text-[#000000]'
+                                className='h-6 w-6 text-[#000000]'
                                 viewBox='0 0 24 24'
                                 fill='none'
                                 stroke='currentColor'
@@ -135,7 +135,7 @@ function ArchiveHeader() {
                                     <Link href='/#contact' legacyBehavior>
                                         <a 
                                             target='_blank'
-                                            className='font-inter rounded-[4px] bg-primary px-[22px] py-[13px] font-medium text-[14px] text-white'
+                                            className='font-inter rounded-[4px] bg-primary px-[22px] py-[13px] font-medium text-[14px] text-white hover:text-white'
                                         >
                                             Book a Consultation
                                         </a>
