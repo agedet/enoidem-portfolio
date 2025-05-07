@@ -13,7 +13,7 @@ const PUBLICATIONS_JOURNAL_ARTICLES = [
         page: '',
         url: '',
         country: '',
-        image: '/publications/journal/14.jpg',
+        image: '/publications/journal/international/14.jpg',
     },
     {
         author: 'Akpan, G. A., Etim, V. E. P. & Usoro, E. B.',
@@ -24,7 +24,7 @@ const PUBLICATIONS_JOURNAL_ARTICLES = [
         page: '52 - 57',
         url: 'www.ajeduionline.org',
         country: '(Ghana)',
-        image: '/publications/journal/journal.jpg',
+        image: '/publications/journal/international/journal.jpg',
     },
     
     

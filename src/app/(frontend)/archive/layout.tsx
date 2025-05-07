@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import { ReactNode } from "react";
 import ArchiveHeader from "@/components/ArchiveHeader";
+import Footer from "@/components/SecondaryFooter";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -35,6 +36,8 @@ export default function ArchiveLayout({
             />
             {children}
           </section>
+          
+          <Footer />
         </main>
       </body>
     </html>
