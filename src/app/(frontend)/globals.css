@@ -6,8 +6,10 @@
 :root {
   --primary: #faa353;
   --secondary: #a41034;
+  --text: #0f172b;
   --radius: 0.625rem;
-  --background: #0f172b;
+  /* --background: #0f172b; */
+  --background: #ffffff;
   --foreground: #94a3aa;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
@@ -68,6 +70,7 @@
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
+  --color-text: var(--text);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
@@ -84,6 +87,10 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
 
 a:hover {
   color: var(--primary);
+}
+
+.nav-cta:hover a:hover {
+  color: var(--text);
 }
 
 .hideMenuNav {

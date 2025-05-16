@@ -126,30 +126,56 @@ const PUBLICATIONS_INTER_JOURNAL_ARTICLES = [
     image: '/publications/journal/international/10.jpg',
   },
   {
-    id: 1,
-    slug: 'towards-transformation-of-higher-education-in-nigeria-a-practical-reality',
-    author: 'Usoro, E. B.',
-    year: '(2016)',
-    articleTitle: 'Towards Transformation of Higher Education in Nigeria: a Practical Reality',
-    journalTitle: 'Multidisciplinary Journal of Academic Excellence.',
-    volume: '15(1)',
-    page: '',
-    url: '',
-    country: '',
-    // image: '/publications/journal/14.jpg',
-  },
-  {
-    id: 2,
-    slug: 'relevance-of-vocational-education-to-small-scale-entrepreneurship-development',
+    id: 10,
+    slug: 'Relevance of Vocational Education to Small Scale Enterpreneurship Development.',
     author: 'Akpan, G. A., Etim, V. E. P. & Usoro, E. B.',
     year: '(2009)',
-    articleTitle: 'Relevance of Vocational Education to Small Scale Entrepreneurship Development',
-    journalTitle: 'African Journal for Contemporary Issues in Education',
+    articleTitle: 'Relevance of Vocational Education to Small Scale Enterpreneurship Development.',
+    journalTitle: 'African Journal for Contemporary Issues in Education.',
     volume: '4(1)',
-    page: '52 - 57',
+    page: '52-57',
     url: 'www.ajeduionline.org',
-    country: '(Ghana)',
-    image: '/publications/journal/journal.jpg',
+    country: 'Ghana',
+    image: '/publications/journal/international/11.jpg',
+  },
+  {
+    id: 11,
+    slug: 'Managing Education for Poverty Alleviation in South-South Nigeria.',
+    author: 'Usoro, E. B., Bassey S. U. And Umobong, M. E.',
+    year: '(2008)',
+    articleTitle: 'Managing Education for Poverty Alleviation in South-South Nigeria.',
+    journalTitle: 'African Educational Research Network and the African Symposium.',
+    volume: '8(2)',
+    page: '116-127',
+    url: '',
+    country: 'USA',
+    image: '/publications/journal/international/28.jpg',
+  },
+  {
+    id: 12,
+    slug: 'Comparative Analysis of Administrative Competencies of Male and Female Secondary School Principals in Supervision.',
+    author: 'Usoro, E. B. And Akpan, A. A.',
+    year: '(2008)',
+    articleTitle: 'Comparative Analysis of Administrative Competencies of Male and Female Secondary School Principals in Supervision.',
+    journalTitle: 'African Research Review.',
+    volume: '2(2)',
+    page: '',
+    url: '',
+    country: 'Ethiopia',
+    image: '/publications/journal/international/26.jpg',
+  },
+  {
+    id: 13,
+    slug: 'An Analytical Study of the Roles and problems associated with Information Utilization by policy decisions makers in Nigeria.',
+    author: 'Usoro, E. B. And Nkanu, W. O.',
+    year: '(2007)',
+    articleTitle: 'An Analytical Study of the Roles and problems associated with Information Utilization by policy decisions makers in Nigeria.',
+    journalTitle: 'South-South Journal of Culture and Development (SJCD).',
+    volume: '9(1)',
+    page: '51-68',
+    url: '',
+    country: '',
+    image: '/publications/journal/international/6.jpg',
   },
 ];
 
@@ -281,7 +307,7 @@ export default function ArticlesPage() {
 
   return (
     <main className=''>
-      <div className='bg-background'>
+      <div className='bg-text'>
         <div className='pt-8 mx-auto max-w-screen-xl px-6 md:px-12'>
           <div>
             <Breadcrumb>
@@ -293,7 +319,7 @@ export default function ArticlesPage() {
           </div>
 
           <div className='py-8'>
-            <h1 className="text-4xl text-slate-200 font-bold mb-8 text-start hover:text-slate-200">Publications</h1>
+            <h1 className="text-3xl text-slate-200 font-bold mb-8 text-start hover:text-slate-200">Publications</h1>
           </div>
         </div>
       </div>
@@ -302,23 +328,23 @@ export default function ArticlesPage() {
         <section className='flex-[4]'>
           <div className="space-y-8 py-8">
             <div>
-              <Tabs>
-                <TabsList>
-                  <TabsTrigger value="international-journal" className="text-white font-semibold">
-                    International Journal Articles
+              <Tabs defaultValue='international'>
+                <TabsList className='mb-6 flex gap-1 xl:mx-0 xl:gap-6'>
+                  <TabsTrigger value="international" className="font-semibold text-xs">
+                    International Articles
                   </TabsTrigger>
-                  <TabsTrigger value="local-journal" className="text-white font-semibold">
-                    Local Journal Articles
+                  <TabsTrigger value="local" className="font-semibold text-xs">
+                    Local Articles
                   </TabsTrigger>
-                  <TabsTrigger value="book" className="text-white font-semibold">
+                  <TabsTrigger value="book" className="font-semibold text-xs">
                     Book Chapters
                   </TabsTrigger>
-                  <TabsTrigger value="conference" className="text-white font-semibold">
+                  <TabsTrigger value="conference" className="font-semibold text-xs">
                     Conference Papers
                   </TabsTrigger>
                 </TabsList>
 
-                <TabsContent value="international-journal" className="pt-4 space-y-4">
+                <TabsContent value="international" className="pt-4 space-y-4">
                   {paginatedArticles.map((article) => (
                     <motion.div
                       key={article.id}
@@ -361,7 +387,8 @@ export default function ArticlesPage() {
                     </motion.div>
                   ))}
                 </TabsContent>
-                <TabsContent value="local-journal" className="pt-4 space-y-4">
+
+                <TabsContent value="local" className="pt-4 space-y-4">
                   {paginatedArticles.map((article) => (
                     <motion.div
                       key={article.id}
@@ -404,9 +431,11 @@ export default function ArticlesPage() {
                     </motion.div>
                   ))}
                 </TabsContent>
+
                 <TabsContent value="book" className="pt-4">
                   <p className="text-gray-600">No books available yet.</p>
                 </TabsContent>
+
                 <TabsContent value="conference" className="pt-4">
                   <p className="text-gray-600">No conference papers available yet.</p>
                 </TabsContent>

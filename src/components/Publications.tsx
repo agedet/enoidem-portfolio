@@ -75,7 +75,7 @@ const PUBLICATIONS_CONFERENCE_PAPERS = [
 function Publications() {
   return (
     <section id="publications" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Publications professor enoidem usoro">
-        <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+        <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-text px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Publications</h2>
         </div>
 
@@ -85,13 +85,13 @@ function Publications() {
                 className=""
             >
                 <TabsList className='mb-6 flex gap-1 xl:mx-0 xl:gap-6'>
-                    <TabsTrigger value="journal-articles" className="text-slate-200 font-semibold text-xs">
+                    <TabsTrigger value="journal-articles" className="font-semibold text-xs">
                         Journal Articles
                     </TabsTrigger>
-                    <TabsTrigger value="book-chapters" className="text-slate-200 font-semibold text-xs">
+                    <TabsTrigger value="book-chapters" className="font-semibold text-xs">
                         Book Chapters
                     </TabsTrigger>
-                    <TabsTrigger value="conference-papers" className="text-slate-200 font-semibold text-xs">
+                    <TabsTrigger value="conference-papers" className="font-semibold text-xs">
                         Conference Papers
                     </TabsTrigger>
                 </TabsList>
@@ -101,7 +101,7 @@ function Publications() {
                         {PUBLICATIONS_JOURNAL_ARTICLES.map((publication, index) => (
                             <li key={index} className="mb-12">
                                 <div className="group relative grid grid-cols-8 gap-4 transition-all sm:items-center sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                                    <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+                                    <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-text lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
                                     
                                     <Image 
                                         src={publication.image}
@@ -113,7 +113,7 @@ function Publications() {
 
                                     <div className="z-10 col-span-6">
                                         <h3 className="-mt-1">
-                                            <a className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-primary focus-visible:text-primary  group/link text-base"  aria-label="(opens in a new tab)">
+                                            <a className="inline-flex items-baseline font-medium leading-tight text-text hover:text-primary focus-visible:text-primary  group/link text-base"  aria-label="(opens in a new tab)">
                                                 <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                                                 <span>{publication.author} {' '} 
                                                     <span className="inline-block">{publication.year}
@@ -131,8 +131,8 @@ function Publications() {
                                             </a>
                                         </h3>
 
-                                        <p className="mt-2 text-sm leading-normal">
-                                            <span className='italic '>
+                                        <p className="mt-2 text-sm leading-normal text-text hover:text-[#ffffff] focus-visible:text-[#ffffff] group-hover:text-white group/link">
+                                            <span className='italic'>
                                                 {publication.articleTitle}.
                                             </span> {' '}
                                             <span> 
@@ -157,7 +157,7 @@ function Publications() {
 
                     <div className="mt-12">
                         <Link href="/archive" aria-label="View Full Project Archive" legacyBehavior>
-                            <a className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-primary focus-visible:text-primary font-semibold text-slate-200 group/link text-base">
+                            <a className="inline-flex items-baseline font-medium leading-tight text-text hover:text-primary focus-visible:text-primary font-semibold text-slate-200 group/link text-base">
                                 <span>
                                     <span className="border-b border-transparent pb-px transition group-hover:border-primary motion-reduce:transition-none">
                                         View Full{' '} 
@@ -181,7 +181,7 @@ function Publications() {
                         {PUBLICATIONS_BOOK_CHAPTERS.map((book, index) => (
                             <li key={index} className="mb-12">
                                 <div className="group relative grid grid-cols-8 gap-4 transition-all sm:items-center sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                                    <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+                                    <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-text lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
                                     
                                     <Image 
                                         src={book.image}
@@ -193,7 +193,7 @@ function Publications() {
 
                                     <div className="z-10 col-span-6">
                                         <h3 className="-mt-1">
-                                            <a className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-primary focus-visible:text-primary  group/link text-base"  aria-label="(opens in a new tab)">
+                                            <a className="inline-flex items-baseline font-medium leading-tight text-text hover:text-primary focus-visible:text-primary  group/link text-base"  aria-label="(opens in a new tab)">
                                                 <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                                                 <span>{book.author} {' '} 
                                                     <span className="inline-block">{book.year}
@@ -211,7 +211,7 @@ function Publications() {
                                             </a>
                                         </h3>
 
-                                        <p className="mt-2 text-sm leading-normal">
+                                        <p className="mt-2 text-sm leading-normal group-hover:text-white">
                                             <span className='italic '>
                                                 {book.articleTitle}.
                                             </span> {' '}
@@ -237,7 +237,7 @@ function Publications() {
 
                     <div className="mt-12">
                         <Link href="/archive" aria-label="View Full Project Archive" legacyBehavior>
-                        <a className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-primary focus-visible:text-primary font-semibold text-slate-200 group/link text-base" >
+                        <a className="inline-flex items-baseline font-medium leading-tight text-text hover:text-primary focus-visible:text-primary font-semibold text-slate-200 group/link text-base" >
                             <span>
                                 <span className="border-b border-transparent pb-px transition group-hover:border-primary motion-reduce:transition-none">
                                     View Full{' '} 
@@ -261,7 +261,7 @@ function Publications() {
                         {PUBLICATIONS_CONFERENCE_PAPERS.map((conference, index) => (
                             <li key={index} className="mb-12">
                                 <div className="group relative grid grid-cols-8 gap-4 transition-all sm:items-center sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                                    <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+                                    <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-text lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
                                     
                                     <Image 
                                         src={conference.image}
@@ -273,7 +273,7 @@ function Publications() {
 
                                     <div className="z-10 col-span-6">
                                         <h3 className="-mt-1">
-                                            <a className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-primary focus-visible:text-primary  group/link text-base"  aria-label="(opens in a new tab)">
+                                            <a className="inline-flex items-baseline font-medium leading-tight text-text hover:text-primary focus-visible:text-primary  group/link text-base"  aria-label="(opens in a new tab)">
                                                 <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                                                 <span>{conference.author} {' '} 
                                                     <span className="inline-block">{conference.year}
@@ -291,7 +291,7 @@ function Publications() {
                                             </a>
                                         </h3>
 
-                                        <p className="mt-2 text-sm leading-normal">
+                                        <p className="mt-2 text-sm leading-normal group-hover:text-white">
                                             <span className='italic '>
                                                 {conference.paperTitle}.
                                             </span> {' '}
@@ -317,7 +317,7 @@ function Publications() {
 
                     <div className="mt-12">
                         <Link aria-label="View Full Project Archive" href="/archive" legacyBehavior>
-                        <a className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-primary focus-visible:text-primary font-semibold text-slate-200 group/link text-base" >
+                        <a className="inline-flex items-baseline font-medium leading-tight text-text hover:text-primary focus-visible:text-primary font-semibold text-slate-200 group/link text-base" >
                             <span>
                                 <span className="border-b border-transparent pb-px transition group-hover:border-primary motion-reduce:transition-none">
                                     View Full{' '} 
