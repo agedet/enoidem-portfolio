@@ -108,7 +108,7 @@ function ArchiveHeader() {
                                                     className="group flex items-center py-2"
                                                 >
                                                     {/* <span className="nav-indicator mr-4 h-px w-8 bg-slate-300 transition-all group-hover:w-16 group-hover:bg-primary group-focus-visible:w-16 group-focus-visible:bg-primary motion-reduce:transition-none"></span> */}
-                                                    <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-300 group-hover:text-primary group-focus-visible:text-primary">{link.label}</span>
+                                                    <span className="nav-text text-xs font-bold uppercase tracking-widest text-white group-hover:text-primary group-focus-visible:text-primary">{link.label}</span>
                                                 </a>
                                             </Link>
                                         </li>
@@ -148,7 +148,7 @@ function ArchiveHeader() {
                                     <li className="mr-5 shrink-0 text-xs">
                                     <a 
                                         href="" 
-                                        className="block text-slate-300 hover:text-primary" 
+                                        className="block text-white hover:text-primary" 
                                         target="_blank" 
                                         rel="noopener noreferrer" 
                                         aria-label="LinkedIn (opens in a new tab)" 
@@ -169,7 +169,7 @@ function ArchiveHeader() {
 
                                 <li>
                                 <a 
-                                    className="block text-slate-300 hover:text-primary" 
+                                    className="block text-white hover:text-primary" 
                                     href="https://instagram.com/" 
                                     target="_blank" 
                                     rel="noreferrer noopener" 
