@@ -56,7 +56,7 @@ function ArchiveHeader() {
                                 </Link>
                             </li>
                             <li className='nav-cta'>
-                                <Link href='#contact' legacyBehavior>
+                                <Link href='/#contact' legacyBehavior>
                                     <a         
                                         className='font-inter rounded-[4px] bg-primary px-[22px] py-[13px] font-medium text-[14px] text-white hover:text-text group-hover:text-text'
                                     >

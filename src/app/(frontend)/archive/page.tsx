@@ -5,6 +5,12 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Breadcrumb } from '@/components/ui/breadcrumb';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 // import Image from 'next/image';
 
 const PUBLICATIONS_INTER_JOURNAL_ARTICLES = [
@@ -313,13 +319,13 @@ export default function ArticlesPage() {
             <Breadcrumb>
             
             </Breadcrumb>
-            <Link href="/" className="text-slate-200 hover:underline">
+            <Link href="/" className="text-white hover:underline">
               ← Back to Home
             </Link>
           </div>
 
           <div className='py-8'>
-            <h1 className="text-3xl text-slate-200 font-bold mb-8 text-start hover:text-slate-200">Publications</h1>
+            <h1 className="text-3xl text-white font-bold mb-8 text-start hover:text-white">Publications</h1>
           </div>
         </div>
       </div>
@@ -328,13 +334,10 @@ export default function ArticlesPage() {
         <section className='flex-[4]'>
           <div className="space-y-8 py-8">
             <div>
-              <Tabs defaultValue='international'>
+              <Tabs defaultValue='journal'>
                 <TabsList className='mb-6 flex gap-1 xl:mx-0 xl:gap-6'>
-                  <TabsTrigger value="international" className="font-semibold text-xs">
-                    International Articles
-                  </TabsTrigger>
-                  <TabsTrigger value="local" className="font-semibold text-xs">
-                    Local Articles
+                  <TabsTrigger value="journal" className="font-semibold text-xs">
+                   Journal Articles
                   </TabsTrigger>
                   <TabsTrigger value="book" className="font-semibold text-xs">
                     Book Chapters
@@ -344,92 +347,103 @@ export default function ArticlesPage() {
                   </TabsTrigger>
                 </TabsList>
 
-                <TabsContent value="international" className="pt-4 space-y-4">
-                  {paginatedArticles.map((article) => (
-                    <motion.div
-                      key={article.id}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.4 }}
-                    >
-                      <div className="py-2">
-                        <p className="mt-2 text-sm text-black leading-normal">
-                          <span>{article.author} {' '} 
-                            <span className="inline-block">
-                              {article.year}. 
-                            </span>
-                          </span> {' '}
-                          <Link href={`/archive/${article.slug}`}>
-                            <span className='italic'>
-                              {article.articleTitle}.
-                            </span> {' '}
-                          </Link>
-                          <span> 
-                            {article.journalTitle} 
-                          </span> {' '} 
-                          <span> 
-                            {article.volume} 
-                          </span> {' '} 
-                          <span> 
-                            {article.page} 
-                          </span> {' '} 
-                          <span>{article.url}</span> {' '}
-                          <span>
-                            {article.country}.
-                          </span>
-                        </p>
+                <TabsContent value="journal" className="pt-4 space-y-4">
+                  <Accordion type="single" collapsible className="w-full">
+                    <AccordionItem value="international">
+                      <AccordionTrigger>International Articles</AccordionTrigger>
+                      <AccordionContent>
+                        {paginatedArticles.map((article) => (
+                          <motion.div
+                            key={article.id}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{ duration: 0.4 }}
+                          >
+                            <div className="py-2">
+                              <p className="mt-2 text-sm text-black leading-normal">
+                                <span>{article.author} {' '} 
+                                  <span className="inline-block">
+                                    {article.year}. 
+                                  </span>
+                                </span> {' '}
+                                <Link href={`/archive/${article.slug}`}>
+                                  <span className='italic'>
+                                    {article.articleTitle}.
+                                  </span> {' '}
+                                </Link>
+                                <span> 
+                                  {article.journalTitle} 
+                                </span> {' '} 
+                                <span> 
+                                  {article.volume} 
+                                </span> {' '} 
+                                <span> 
+                                  {article.page} 
+                                </span> {' '} 
+                                <span>{article.url}</span> {' '}
+                                <span>
+                                  {article.country}.
+                                </span>
+                              </p>
 
-                        <Link href={`/archive/${article.slug}`}>
-                          <span className="text-primary hover:underline inline-block mt-4">View →</span>
-                        </Link>
-                      </div>
-                    </motion.div>
-                  ))}
-                </TabsContent>
+                              <Link href={`/archive/${article.slug}`}>
+                                <span className="text-primary hover:underline inline-block mt-4">View →</span>
+                              </Link>
+                            </div>
+                          </motion.div>
+                        ))}
+                      </AccordionContent>
+                    </AccordionItem>
 
-                <TabsContent value="local" className="pt-4 space-y-4">
-                  {paginatedArticles.map((article) => (
-                    <motion.div
-                      key={article.id}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.4 }}
-                    >
-                      <div className="py-2">
-                        <p className="mt-2 text-sm text-black leading-normal">
-                          <span>{article.author} {' '} 
-                            <span className="inline-block">
-                              {article.year}. 
-                            </span>
-                          </span> {' '}
-                          <Link href={`/archive/${article.slug}`}>
-                            <span className='italic'>
-                              {article.articleTitle}.
-                            </span> {' '}
-                          </Link>
-                          <span> 
-                            {article.journalTitle} 
-                          </span> {' '} 
-                          <span> 
-                            {article.volume} 
-                          </span> {' '} 
-                          <span> 
-                            {article.page} 
-                          </span> {' '} 
-                          <span>{article.url}</span> {' '}
-                          <span>
-                            {article.country}.
-                          </span>
-                        </p>
+                    <AccordionItem value="local">
+                      <AccordionTrigger>Local Articles</AccordionTrigger>
+                      
+                      <AccordionContent>
+                        {paginatedArticles.map((article) => (
+                          <motion.div
+                            key={article.id}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{ duration: 0.4 }}
+                          >
+                            <div className="py-2">
+                              <p className="mt-2 text-sm text-black leading-normal">
+                                <span>{article.author} {' '} 
+                                  <span className="inline-block">
+                                    {article.year}. 
+                                  </span>
+                                </span> {' '}
+                                <Link href={`/archive/${article.slug}`}>
+                                  <span className='italic'>
+                                    {article.articleTitle}.
+                                  </span> {' '}
+                                </Link>
+                                <span> 
+                                  {article.journalTitle} 
+                                </span> {' '} 
+                                <span> 
+                                  {article.volume} 
+                                </span> {' '} 
+                                <span> 
+                                  {article.page} 
+                                </span> {' '} 
+                                <span>{article.url}</span> {' '}
+                                <span>
+                                  {article.country}.
+                                </span>
+                              </p>
 
-                        <Link href={`/archive/${article.slug}`}>
-                          <span className="text-primary hover:underline inline-block mt-4">View →</span>
-                        </Link>
-                      </div>
-                    </motion.div>
-                  ))}
+                              <Link href={`/archive/${article.slug}`}>
+                                <span className="text-primary hover:underline inline-block mt-4">View →</span>
+                              </Link>
+                            </div>
+                          </motion.div>
+                        ))}
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 </TabsContent>
 
                 <TabsContent value="book" className="pt-4">
@@ -476,14 +490,14 @@ export default function ArticlesPage() {
           </div>
         </section>
         
-        <section className='flex-[3]'>
+        <section className='flex-[3] border-l border-slate-200 pl-8'>
           <div className="py-8">
             <div>
-              <h1 className="text-4xl text-slate-200 font-bold mb-8 text-start hover:text-slate-200">Conference Papers</h1>
+              <h1 className="text-xl text-text font-semibold mb-8 text-start hover:text-text">Conference Papers</h1>
             </div>
 
             <div>
-              <h1 className="text-4xl text-slate-200 font-bold mb-8 text-start hover:text-slate-200">Books</h1>
+              <h1 className="text-xl text-text font-semibold mb-8 text-start hover:text-text">Books</h1>
             </div>
           </div>
         </section>
