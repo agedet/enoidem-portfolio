@@ -5,7 +5,7 @@ import React from 'react'
 function Footer() {
   return (
     <footer id='footer' className='bg-text text-white'>
-        <div className='mx-auto max-w-screen-xl px-6 py-12 font-sans md:px-12 md:pt-16 md:pb-10 flex flex-col gap-12'>
+        <div className='mx-auto max-w-screen-xl px-4 py-12 font-sans md:px-12 md:pt-16 md:pb-10 flex flex-col gap-12'>
             <div className='flex flex-col gap-10 md:flex-row md:gap-8 lg:gap-12 w-full'>
                 <div className='flex-[2] flex flex-col gap-4'>
                     <h2 className='text-xl font-bold text-white'>Professor Enoidem Usoro</h2>
