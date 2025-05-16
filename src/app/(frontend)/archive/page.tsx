@@ -314,7 +314,7 @@ export default function ArticlesPage() {
   return (
     <main className=''>
       <div className='bg-text'>
-        <div className='pt-8 mx-auto max-w-screen-xl px-6 md:px-12'>
+        <div className='pt-8 mx-auto max-w-screen-xl px-4 md:px-12'>
           <div>
             <Breadcrumb>
             
@@ -330,7 +330,7 @@ export default function ArticlesPage() {
         </div>
       </div>
 
-      <div className='flex flex-col mx-auto max-w-screen-xl pt-[20px] pb-[80px] px-6 md:px-12  md:flex-row gap-14'>
+      <div className='flex flex-col mx-auto max-w-screen-xl pt-[20px] pb-[80px] px-4 md:px-12  md:flex-row gap-14'>
         <section className='flex-[4]'>
           <div className="space-y-8 py-8">
             <div>
