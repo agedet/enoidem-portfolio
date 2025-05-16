@@ -51,7 +51,7 @@ function Education() {
                                 alt={education.degree}  
                                 width={64}
                                 height={64} 
-                                className="rounded border-2 border-text/10 transition group-hover:border-white p-2 sm:order-1 sm:col-span-2 sm:translate-y-1"
+                                className="rounded border-2 border-text transition group-hover:border-white p-2 sm:order-1 sm:col-span-2 sm:translate-y-1"
                                 src={education.icon} 
                             />
                             
@@ -64,7 +64,6 @@ function Education() {
                                 </h3>
                                 <p>
                                     <a className="mt-2 text-sm leading-normal group-hover:text-[#ffffff] focus-visible:text-white group/link text-base">{education.school}</a>
-                                    
                                 </p>
                             </div>
                         </div>

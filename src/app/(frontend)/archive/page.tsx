@@ -490,7 +490,7 @@ export default function ArticlesPage() {
           </div>
         </section>
         
-        <section className='flex-[3] border-l border-slate-200 pl-8'>
+        <section className='flex-[3] lg:border-l lg:border-slate-200 lg:pl-8'>
           <div className="py-8">
             <div>
               <h1 className="text-xl text-text font-semibold mb-8 text-start hover:text-text">Conference Papers</h1>

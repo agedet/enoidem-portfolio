@@ -103,6 +103,7 @@ function Contact() {
               </SelectContent>
             </Select>
           </div>
+          
           <div className='grid gap-2'>
             <Label htmlFor='message'>Message</Label>
             <Textarea 

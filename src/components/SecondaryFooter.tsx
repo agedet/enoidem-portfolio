@@ -11,7 +11,7 @@ function Footer() {
                     <h2 className='text-xl font-bold text-white'>Professor Enoidem Usoro</h2>
 
                     <div className='grid gap-2'>
-                        <p className='text-sm text-white/95 font-semibold w-[80%]'>
+                        <p className='text-sm text-white font-normal w-[80%]'>
                             Prof. Enoidem Usoro is a Professor of Business Education from Department of Business Education, Faculty of Education, University of Uyo, Nigeria.
                         </p>
 

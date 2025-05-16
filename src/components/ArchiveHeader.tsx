@@ -15,13 +15,13 @@ function ArchiveHeader() {
     const closeMobileClicked = () => setIsNavOpen(false);
 
   return (
-    <header className="bg-text ">
+    <header className="bg-text">
         <div className='py-4 mx-auto max-w-screen-xl px-6 md:px-12'>
             <div className="flex justify-between items-center">
                 <div className='flex-[1]'>
                     <h1 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
                         <Link href='/'>
-                            Enoidem
+                            Enoidem Usoro
                         </Link>
                     </h1>
                 </div>
