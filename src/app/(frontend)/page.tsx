@@ -6,6 +6,7 @@ import Publications from "@/components/Publications";
 import Contact from "@/components/Contact/Contact";
 import Stats from "@/components/Stats";
 import Header from "@/components/Header";
+import Associations from "@/components/Associations";
 
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
             <About />
             <Stats />
             <Education />
+            <Associations />
             <Experience />
             <Publications />
             <Contact />
