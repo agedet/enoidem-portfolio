@@ -1,12 +1,12 @@
 import About from "@/components/About";
 import Experience from "@/components/Experience";
-import Footer from "@/components/Footer";
 import Education from "@/components/Education";
 import Publications from "@/components/Publications";
 import Contact from "@/components/Contact/Contact";
 import Stats from "@/components/Stats";
 import Header from "@/components/Header";
 import Associations from "@/components/Associations";
+import ASFooter from "@/components/ASFooter";
 
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
             <Experience />
             <Publications />
             <Contact />
-            <Footer />
+            <ASFooter />
           </main>
         </section>
       </main>

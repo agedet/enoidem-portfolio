@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import React from 'react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs'
-import Link from 'next/link'
+import Image from 'next/image';
+import React from 'react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
+import Link from 'next/link';
 
 const PUBLICATIONS_JOURNAL_ARTICLES = [
     {
@@ -88,13 +88,13 @@ const PUBLICATIONS_CONFERENCE_PAPERS = [
 function Publications() {
   return (
     <section id="publications" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Publications professor enoidem usoro">
-        <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-text px-4 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+        <div className="sticky top-0 z-20 -mx-6 mb-8 w-screen bg-text px-4 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Publications</h2>
         </div>
 
-        <div className='mt-6'>
+        <div className='mt-8'>
             <Tabs defaultValue='journal'>
-                <TabsList className='mb-6 flex gap-1 xl:mx-0 xl:gap-6'>
+                <TabsList className='mb-6 flex gap-0 xl:mx-0 xl:gap-6'>
                     <TabsTrigger value="journal" className="font-semibold text-xs">
                         Journal Articles
                     </TabsTrigger>

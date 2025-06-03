@@ -1,26 +1,37 @@
+import { LucideMail, LucidePhone } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-function Footer() {
+function ASFooter() {
   return (
-    <footer id='footer' className='bg-text text-white'>
-        <div className='mx-auto max-w-screen-xl px-4 py-12 font-sans md:px-12 md:pt-16 md:pb-10 flex flex-col gap-12'>
-            <div className='flex flex-col gap-10 md:flex-row md:gap-8 lg:gap-12 w-full'>
+    <footer id='footer' className='bg-white text-bg'>
+        <div className='mx-auto max-w-screen-xl font-sans md:pb-10 flex flex-col gap-12'>
+            <div className='flex flex-col gap-10 md:gap-8 lg:gap-12 w-full'>
                 <div className='flex-[2] flex flex-col gap-4'>
-                    <h2 className='text-xl font-bold text-white'>Professor Enoidem Usoro</h2>
+                    <h2 className='text-xl font-bold text-bg lg:hidden'>Professor Enoidem Usoro</h2>
 
-                    <div className='grid gap-2'>
-                        <p className='text-sm text-white font-normal w-[75%]'>
+                    <div className='grid gap-4'>
+                        <p className='text-sm text-bg font-normal w-[75%] lg:hidden'>
                             Prof. Enoidem Usoro is a Professor of Business Education from Department of Business Education, Faculty of Education, University of Uyo, Nigeria.
                         </p>
 
                         <h2 className='text-lg font-bold mt-4'>Contact</h2>
 
                         <div className='flex flex-col gap-4 text-sm'>
-                            <span>
-                                <Link href='#' className='font-semibold'>Email: enoidemusoro@gmail.com</Link>
-                            </span>
+                            <Link href='#' className='font-semibold text-sm flex items-center gap-2'>
+                                <span className='flex'>
+                                    <LucideMail /> 
+                                </span>
+                                <span>enoidemusoro@gmail.com</span>
+                            </Link>
+                            <Link href='#' className='font-semibold text-sm flex items-center gap-2'>
+                                <span>
+                                    <LucidePhone /> 
+                                </span>
+                                <span>+234 802 377 0106</span>
+                            </Link>
+                            
                         </div>
                     </div>
                 </div>
@@ -102,7 +113,7 @@ function Footer() {
 
                 <span>
                     Designed by {' '}
-                    <Link href='' className='text-primary'>Culmerin Inc</Link>
+                    <Link href='https://wa.me/2348081744745' className='text-primary'>Culmerin Inc</Link>
                 </span>
             </div>
         </div>
@@ -110,4 +121,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default ASFooter
