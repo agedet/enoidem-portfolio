@@ -12,7 +12,7 @@ function ASFooter() {
                     <h2 className='text-xl font-bold text-bg lg:hidden'>Professor Enoidem Usoro</h2>
 
                     <div className='grid gap-4'>
-                        <p className='text-sm text-bg font-normal w-[75%] lg:hidden'>
+                        <p className='text-sm text-bg font-normal lg:hidden'>
                             Prof. Enoidem Usoro is a Professor of Business Education from Department of Business Education, Faculty of Education, University of Uyo, Nigeria.
                         </p>
 

@@ -313,19 +313,19 @@ export default function ArticlesPage() {
 
   return (
     <main className=''>
-      <div className='bg-text'>
+      <div className='bg-shade h-[200px]'>
         <div className='pt-8 mx-auto max-w-screen-xl px-4 md:px-12'>
           <div>
             <Breadcrumb>
             
             </Breadcrumb>
-            <Link href="/" className="text-white hover:underline">
+            <Link href="/" className="text-text hover:underline">
               ← Back to Home
             </Link>
           </div>
 
           <div className='py-8'>
-            <h1 className="text-3xl text-white font-bold mb-8 text-start hover:text-white">Publications</h1>
+            <h1 className="text-3xl text-text font-bold mb-8 text-start hover:text-white">Publications</h1>
           </div>
         </div>
       </div>

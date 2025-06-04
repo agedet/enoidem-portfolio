@@ -4,9 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --primary: #faa353;
+  --primary: #c4511b;
   --secondary: #a41034;
-  --text: #0f172b;
+  --shade: #f7fafa;
+  --text: #08252b;
   --radius: 0.625rem;
   /* --background: #0f172b; */
   --background: #ffffff;
@@ -70,6 +71,7 @@
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
+  --color-shade: var(--shade);
   --color-text: var(--text);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
@@ -106,7 +108,7 @@ a:hover {
   height: 100vh;
   top: 0;
   left: 0;
-  background: var(--secondary);
+  background: var(--text);
   z-index: 40;
   font-weight: 600;
   padding: 40px 20px;
