@@ -24,10 +24,10 @@ export default function RootLayout({
       <body
         className={`${inter.variable} antialiased `}
       >
-        <NavBar />
         <Toaster 
           richColors position="top-right" 
         />
+        <NavBar />
         {children}
       </body>
     </html>
