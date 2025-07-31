@@ -11,7 +11,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-// import Image from 'next/image';
 
 const PUBLICATIONS_INTER_JOURNAL_ARTICLES = [
   {

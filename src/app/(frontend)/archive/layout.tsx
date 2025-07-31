@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import { ReactNode } from "react";
-import ArchiveHeader from "@/components/ArchiveHeader";
 import Footer from "@/components/SecondaryFooter";
 
 const inter = Inter({
@@ -27,7 +26,7 @@ export default function ArchiveLayout({
       <body
         className={`${inter.variable} antialiased`}
       >
-        <main id="content">
+        <main>
           <section className="bg-white">
             <Toaster 
               richColors position="top-right" 
