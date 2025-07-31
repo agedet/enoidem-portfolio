@@ -8,7 +8,7 @@ const NAV_LINKS = [
   { href: '/#about', label: 'About' },
   { href: '/#education', label: 'Education' },
   { href: '/#experience', label: 'Experience' },
-  { href: '/#publications', label: 'Publications' },
+  { href: '/archive', label: 'Publications' },
   { href: '/#contact', label: 'Contact' },
 ]
 
@@ -39,13 +39,9 @@ function NavBar() {
                         <ul className="flex justify-start items-center tracking-[0.75px] font-medium gap-[40px]">
                             {NAV_LINKS.map((link) => (
                                 <li key={link.label}>
-                                    <Link href={link.href} legacyBehavior>
-                                        <a 
-                                            className="group flex items-center py-3"
-                                        >
-                                            {/* <span className="nav-indicator mr-4 h-px w-8 bg-slate-300 transition-all group-hover:w-16 group-hover:bg-primary group-focus-visible:w-16 group-focus-visible:bg-primary motion-reduce:transition-none"></span> */}
-                                            <span className="nav-text text-xs font-bold uppercase tracking-widest text-white group-hover:text-primary group-focus-visible:text-primary">{link.label}</span>
-                                        </a>
+                                    <Link href={link.href} className="group flex items-center py-3">
+                                        {/* <span className="nav-indicator mr-4 h-px w-8 bg-slate-300 transition-all group-hover:w-16 group-hover:bg-primary group-focus-visible:w-16 group-focus-visible:bg-primary motion-reduce:transition-none"></span> */}
+                                        <span className="nav-text text-xs font-bold uppercase tracking-widest text-white group-hover:text-primary group-focus-visible:text-primary">{link.label}</span>
                                     </Link>
                                 </li>
                             ))}
@@ -53,7 +49,8 @@ function NavBar() {
 
                         <ul className='flex justify-center items-center tracking-[0.75px] font-medium gap-10'>
                             <li className='capitalize'>
-                                <Link href='/' legacyBehavior>
+                                <Link href='/'>
+                                    <span>
                                     <Image 
                                         src='/icons8-whatsapp-48.png'
                                         alt='whatsapp_icon'
@@ -61,15 +58,12 @@ function NavBar() {
                                         height={48}
                                         className='w-[48px] h-[48px] object-contain' 
                                     />
+                                    </span>
                                 </Link>
                             </li>
                             <li className='nav-cta'>
-                                <Link href='/#contact' legacyBehavior>
-                                    <a         
-                                        className='font-inter rounded-[4px] bg-primary px-[22px] py-[13px] font-medium text-[14px] text-white hover:text-text group-hover:text-text'
-                                    >
-                                        Book a Consultation
-                                    </a>
+                                <Link href='/#contact' className='font-inter rounded-[4px] bg-primary px-[22px] py-[13px] font-medium text-[14px] text-white hover:text-text group-hover:text-text' >
+                                    Book a Consultation
                                 </Link>
                             </li>
                         </ul>
@@ -111,13 +105,9 @@ function NavBar() {
                                 <ul className='MENU-LINK-MOBILE-OPEN grid gap-4 '>
                                     {NAV_LINKS.map((link) => (
                                         <li key={link.label} onClick={closeMobileClicked}>
-                                            <Link href={link.href} legacyBehavior>
-                                                <a 
-                                                    className="group flex items-center py-2"
-                                                >
-                                                    {/* <span className="nav-indicator mr-4 h-px w-8 bg-slate-300 transition-all group-hover:w-16 group-hover:bg-primary group-focus-visible:w-16 group-focus-visible:bg-primary motion-reduce:transition-none"></span> */}
-                                                    <span className="nav-text text-xs font-bold uppercase tracking-widest text-white group-hover:text-primary group-focus-visible:text-primary">{link.label}</span>
-                                                </a>
+                                            <Link href={link.href} className="group flex items-center py-2">
+                                                {/* <span className="nav-indicator mr-4 h-px w-8 bg-slate-300 transition-all group-hover:w-16 group-hover:bg-primary group-focus-visible:w-16 group-focus-visible:bg-primary motion-reduce:transition-none"></span> */}
+                                                <span className="nav-text text-xs font-bold uppercase tracking-widest text-white group-hover:text-primary group-focus-visible:text-primary">{link.label}</span>
                                             </Link>
                                         </li>
                                     ))}
@@ -127,7 +117,7 @@ function NavBar() {
                                     <li 
                                         onClick={closeMobileClicked}
                                     >
-                                        <Link href='/whatsapp' legacyBehavior>
+                                        <Link href='/whatsapp'>
                                             <Image 
                                                 src='/icons8-whatsapp-48.png'
                                                 alt='whatsapp_icon'
@@ -141,13 +131,8 @@ function NavBar() {
                                     <li
                                         onClick={closeMobileClicked}
                                     >
-                                        <Link href='/#contact' legacyBehavior>
-                                            <a 
-                                                target='_blank'
-                                                className='font-inter rounded-[4px] bg-primary px-[22px] py-[13px] font-medium text-[14px] text-white hover:text-white'
-                                            >
-                                                Book a Consultation
-                                            </a>
+                                        <Link href='/#contact' target='_blank' className='font-inter rounded-[4px] bg-primary px-[22px] py-[13px] font-medium text-[14px] text-white hover:text-white'>
+                                            Book a Consultation
                                         </Link>
                                     </li>
                                 </ul>

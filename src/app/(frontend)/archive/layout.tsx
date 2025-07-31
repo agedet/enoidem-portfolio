@@ -28,8 +28,6 @@ export default function ArchiveLayout({
         className={`${inter.variable} antialiased`}
       >
         <main id="content">
-          <ArchiveHeader />
-
           <section className="bg-white">
             <Toaster 
               richColors position="top-right" 
