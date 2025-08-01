@@ -33,8 +33,6 @@ export default function ArchiveLayout({
             />
             {children}
           </section>
-          
-          <Footer />
         </main>
       </body>
     </html>
