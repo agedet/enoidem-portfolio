@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import { ReactNode } from "react";
-import Footer from "@/components/SecondaryFooter";
 
 const inter = Inter({
   variable: "--font-inter",
