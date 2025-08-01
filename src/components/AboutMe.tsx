@@ -9,7 +9,7 @@ export default function AboutMe() {
                 About
             </h2>
         </div>
-        <div>
+        <div className='flex flex-col items-center justify-center gap-4 px-4 md:px-12 lg:flex-row lg:gap-8 lg:px-0'>
             <div className='hidden mb-6 lg:flex justify-center items-center'>
                 <Image 
                     src='/professor-enoidem-usoro.png'
@@ -20,21 +20,23 @@ export default function AboutMe() {
                 />
             </div>
 
-            <p className="mb-4">
-                Professor Enoidem Usoro is an erudite scholar who has left an unerasable imprint in Business Education across the globe. She began her career as a teaching assistant in Unicross. In the University she has handled several key responsibilities. At present she is the Deputy Vice Chancellor (Academic) of Univeristy of Uyo.
-            </p>
-            <p className="mb-4">
-                Committees and Community Services within and outside University of Uyo have found her membership necessary due to her intelligible contributions and insights. Some of such committees includes Chairman, Committee on Affiliate Institutions with University of Uyo, Member, Committee On Quick Response to University of Uyo on Covid-19 and several others.
-            </p>
-            <p className="mb-4">
-                She holds Membership in several Professional Bobies such as National Association of Women in Academics (NAWACS), Association for the Advancement of Vocational Education of Nigeria where she serves as the National Treasurer.
-            </p>
-            <p className="mb-4">
-                Despite her busy schedule she has published several articles in National and International Journals, Book Chapters and Conference Papers. Many of which are open access on this knowledge base. In 2016, Professor Eno Usoro presented the 49th Inaugural Lecture of the University of Uyo on Business Education: Skills Acquisition and Development for Posterity.
-            </p>
-            <p className="mb-4">
-                She is married and blessed with 5 beautiful children.
-            </p>
+            <div>
+                <p className="mb-4">
+                    Professor Enoidem Usoro is an erudite scholar who has left an unerasable imprint in Business Education across the globe. She began her career as a teaching assistant in Unicross. In the University she has handled several key responsibilities. At present she is the Deputy Vice Chancellor (Academic) of Univeristy of Uyo.
+                </p>
+                <p className="mb-4">
+                    Committees and Community Services within and outside University of Uyo have found her membership necessary due to her intelligible contributions and insights. Some of such committees includes Chairman, Committee on Affiliate Institutions with University of Uyo, Member, Committee On Quick Response to University of Uyo on Covid-19 and several others.
+                </p>
+                <p className="mb-4">
+                    She holds Membership in several Professional Bobies such as National Association of Women in Academics (NAWACS), Association for the Advancement of Vocational Education of Nigeria where she serves as the National Treasurer.
+                </p>
+                <p className="mb-4">
+                    Despite her busy schedule she has published several articles in National and International Journals, Book Chapters and Conference Papers. Many of which are open access on this knowledge base. In 2016, Professor Eno Usoro presented the 49th Inaugural Lecture of the University of Uyo on Business Education: Skills Acquisition and Development for Posterity.
+                </p>
+                <p className="mb-4">
+                    She is married and blessed with 5 beautiful children.
+                </p>
+            </div>
         </div>
     </section>
   );

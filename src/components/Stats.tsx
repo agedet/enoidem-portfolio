@@ -25,7 +25,7 @@ const stats = [
 function Stats() {
   return (
     <section id='stats' className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
-        <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 lg:grid-cols-4 lg:gap-8'>
             {stats.map((item, index) => {
                 return (
                     <div key={index} className='border-l-4 pl-2 border-primary bg-primary/5 py-[10px] flex flex-col text-center'>
